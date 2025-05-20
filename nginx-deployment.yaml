@@ -1,17 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tjpe-homologacao-ume
-  namespace: tjpe-producao-gedai
+  name: app01
+  namespace: tjpe-homologacao-ume
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tjpe-homologacao-ume
+      app: app01
+      namespace: tjpe-homologacao-ume
   template:
     metadata:
       labels:
-        app: tjpe-homologacao-ume
+        app: app01
+        namespace: tjpe-homologacao-ume
     spec:
       containers:
         - name: nginx
@@ -22,11 +24,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: tjpe-homologacao-ume
-  namespace: tjpe-producao-gedai
+  name: app01
+  namespace: tjpe-homologacao-ume
 spec:
   selector:
-    app: tjpe-homologacao-ume
+    app: app01
+    namespace: tjpe-homologacao-ume
   ports:
     - port: 80
       targetPort: 80
