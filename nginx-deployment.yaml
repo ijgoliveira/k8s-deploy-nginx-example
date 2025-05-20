@@ -43,4 +43,4 @@ data:
   ambiente: producao
   app_name: nginx-deployment-01
   porta_padrao: "80"
-  mensagem_boas_vindas: "Bem-vindo ao nginx no Kubernetes!"
+  mensagem_boas_vindas: "Bem-vindo ao nginx no Kubernetes UPDATE!"
